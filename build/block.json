@@ -1,0 +1,66 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/cnnbr-virtual-library",
+  "version": "0.1.0",
+  "title": "Cnnbr Virtual Library",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Plugin com os bloco de CNN Brasil",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "books": {
+      "type": "array",
+      "default": [
+        {
+          "booktitle": "booktitle",
+          "bookAuthor": "bookAuthor",
+          "bookLanguage": "bookLanguage",
+          "bookCover": "bookCover",
+          "bookID": "bookID"
+        }
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "booktitle": {
+            "type": "string"
+          },
+          "bookAuthor": {
+            "type": "string"
+          },
+          "bookLanguage": {
+            "type": "string"
+          },
+          "bookCover": {
+            "type": "string"
+          },
+          "bookID": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "hideAuthor": {
+      "type": "boolean",
+      "default": false
+    },
+    "language": {
+      "type": "string",
+      "default": "pt-br",
+      "enum": [
+        "pt-br",
+        "en",
+        "fr"
+      ]
+    }
+  },
+  "textdomain": "cnnbr-virtual-library",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}
